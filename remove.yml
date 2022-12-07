@@ -1,0 +1,18 @@
+--- #uninstall softwares
+
+   - hosts: all
+     become: yes
+     connection: ssh
+     user: ansible
+
+     tasks:
+
+       - name: uninstalling softwares
+         yum: 
+
+           name: ['java','httpd']
+           state: absent
+
+
+
+             

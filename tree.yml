@@ -1,0 +1,12 @@
+--- #this is my first playbook
+
+    - hosts: all
+      become: yes
+      connection: ssh
+      user: ansible
+
+      tasks: 
+        - name: Installing tree software on hosts
+          action: yum pkg=tree state=present
+          ignore_errors: yes
+

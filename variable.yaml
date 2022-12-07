@@ -1,0 +1,13 @@
+--- #varibale file
+
+   - hosts: all
+     become: yes
+
+     vars:
+        pkgname: tree
+
+     tasks:
+       
+       - name: creating variable file
+         action: yum name= '{{pkgname}}' state=installed
+

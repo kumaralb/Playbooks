@@ -1,0 +1,15 @@
+--- #file creation
+
+    - hosts: all
+      become: yes
+
+      tasks:
+
+        - name: create directory
+          file:
+
+            path: /home/ansible/Krishna
+            state: directory
+
+
+

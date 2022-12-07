@@ -1,0 +1,15 @@
+--- #Loops playbook
+
+   - hosts: all
+     become: yes
+
+     tasks:
+
+       - name: installing softwares
+         yum: name='{{item}}' state=absent
+
+         with_items:
+          
+          - java
+          - docker
+

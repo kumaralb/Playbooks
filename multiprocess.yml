@@ -1,0 +1,14 @@
+--- #this is my first playbook
+
+    - hosts: all
+      user: ansible
+      connection: ssh
+      become: yes
+
+      tasks:
+        - name: installing httpd in webservers
+          action: yum pkg=httpd state=installed
+        
+        - name: start httpd service
+          action: service name=httpd state=started
+
