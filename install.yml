@@ -1,0 +1,11 @@
+--- #install tree
+- hosts: all
+  become: true
+  connection: ssh
+  user: ansible
+
+  tasks:
+    - name: installing tree s/w
+      yum: name=tree state=installed
+  tags:
+      install
